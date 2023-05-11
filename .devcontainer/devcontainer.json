@@ -1,0 +1,34 @@
+{
+  "name": "textanalyser",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "waitFor": "postCreateCommand",
+  "forwardPorts": [3000, 3001, 9323],
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18.13.0"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ZixuanChen.vitest-explorer",
+        "mikestead.dotenv",
+        "ms-azuretools.vscode-docker",
+        "miclo.sort-typescript-imports"
+      ],
+      "settings": {
+        "search.exclude": {
+          "**/node_modules": true,
+          "**/.yarn": true,
+          "**/.git": true,
+          "**/.DS_Store": true,
+          "**/Thumbs.db": true
+        }
+      }
+    }
+  }
+}
